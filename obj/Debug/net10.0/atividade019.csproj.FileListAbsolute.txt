@@ -1,0 +1,15 @@
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/obj/Debug/net10.0/atividade019.GeneratedMSBuildEditorConfig.editorconfig
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/obj/Debug/net10.0/atividade019.AssemblyInfoInputs.cache
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/obj/Debug/net10.0/atividade019.AssemblyInfo.cs
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/obj/Debug/net10.0/atividade019.csproj.CoreCompileInputs.cache
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/obj/Debug/net10.0/atividade019.sourcelink.json
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/bin/Debug/net10.0/atividade019
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/bin/Debug/net10.0/atividade019.deps.json
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/bin/Debug/net10.0/atividade019.runtimeconfig.json
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/bin/Debug/net10.0/atividade019.dll
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/bin/Debug/net10.0/atividade019.pdb
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/obj/Debug/net10.0/atividade019.dll
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/obj/Debug/net10.0/refint/atividade019.dll
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/obj/Debug/net10.0/atividade019.pdb
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/obj/Debug/net10.0/atividade019.genruntimeconfig.cache
+/Users/thiagoeduardo/PROJETOS/Faculdade/CS/atividade019/obj/Debug/net10.0/ref/atividade019.dll
