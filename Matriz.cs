@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-class Program
+class Matriz
 {
     static int[,] carregarMatriz(string caminhoArquivo)
     {
