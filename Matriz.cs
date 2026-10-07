@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.Globalization;
 
 class Program
 {
@@ -78,31 +77,47 @@ class Program
         return percentuais;
     }
 
+    static void analisarAumento(int[,] matrizAnterior, int[,] matrizAtual)
+    {
+        double[] percentuaisAnterior = calcularPercentuaDesmatamento(matrizAnterior);
+        double[] percentuaisAtual = calcularPercentuaDesmatamento(matrizAtual);
+
+        double percentualDesmatadoAnterior = percentuaisAnterior[0];
+        double percentualDesmatadoAtual = percentuaisAtual[0];
+
+        Console.WriteLine("Percentual de ocorrências na matriz 6 meses atrás:");
+        Console.WriteLine($"Área Desmatada (Código 0): {percentualDesmatadoAnterior:F2}%");
+        Console.WriteLine();
+
+        Console.WriteLine("Percentual de ocorrências na matriz atual:");
+        Console.WriteLine($"Área Desmatada (Código 0): {percentualDesmatadoAtual:F2}%");
+        Console.WriteLine();
+
+        if (percentualDesmatadoAtual > percentualDesmatadoAnterior)
+        {
+            Console.WriteLine($"Houve Aumento no Desmatamento – Anterior {percentualDesmatadoAnterior:F2}% -> Atual {percentualDesmatadoAtual:F2}%");
+        }
+        else if (percentualDesmatadoAtual < percentualDesmatadoAnterior)
+        {
+            Console.WriteLine($"Houve Redução no Desmatamento – Anterior {percentualDesmatadoAnterior:F2}% -> Atual {percentualDesmatadoAtual:F2}%");
+        }
+        else
+        {
+            Console.WriteLine($"Não houve alteração no Desmatamento – Anterior {percentualDesmatadoAnterior:F2}% -> Atual {percentualDesmatadoAtual:F2}%");
+        }
+    }
+
     static void Main()
     {
-        CultureInfo cultura = new CultureInfo("pt-BR");
-
         int[,] matrizAnterior = carregarMatriz("dados_matriz_6meses_atras.csv");
         int[,] matrizAtual = carregarMatriz("dados_matriz_atual.csv");
 
-        Console.WriteLine("MONITORAMENTO DE DESMATAMENTO");
+        Console.WriteLine("=== MONITORAMENTO DE DESMATAMENTO ===");
         Console.WriteLine();
 
         exibirMatriz("Matriz de 6 meses atrás:", matrizAnterior);
         exibirMatriz("Matriz atual:", matrizAtual);
 
-        double[] percentuaisAnterior = calcularPercentuaDesmatamento(matrizAnterior);
-        double[] percentuaisAtual = calcularPercentuaDesmatamento(matrizAtual);
-
-        Console.WriteLine("Percentuais 6 meses atrás:");
-        Console.WriteLine($"Desmatada (0): {percentuaisAnterior[0].ToString("F2", cultura)}%");
-        Console.WriteLine($"Parcial (1): {percentuaisAnterior[1].ToString("F2", cultura)}%");
-        Console.WriteLine($"Preservada (2): {percentuaisAnterior[2].ToString("F2", cultura)}%");
-        Console.WriteLine();
-
-        Console.WriteLine("Percentuais atuais:");
-        Console.WriteLine($"Desmatada (0): {percentuaisAtual[0].ToString("F2", cultura)}%");
-        Console.WriteLine($"Parcial (1): {percentuaisAtual[1].ToString("F2", cultura)}%");
-        Console.WriteLine($"Preservada (2): {percentuaisAtual[2].ToString("F2", cultura)}%");
+        analisarAumento(matrizAnterior, matrizAtual);
     }
 }
